@@ -1,0 +1,20 @@
+from random import randint
+
+x = randint(0, 20)
+
+i = 1
+while i <= 3:
+    n = int(input("Enter your guess: "))
+    if x - n >= 5:
+        print("Guess gone too low.")
+    elif n - x >= 5:
+        print("Guess gone too high.")
+    elif n == x:
+        print("That's correct!!!!!")
+        break
+    else:
+        print("Close.")
+    i = i+1
+
+if i > 3:
+    print("You're out of guesses. The number you were looking for was ", x, ". Bye Bye!")
